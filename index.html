@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sesame CSM 1B • One-Click Deploy</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:#000000;
+  color:#ffffff;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+.container{
+  background:#111111;
+  border:1px solid #333333;
+  border-radius:16px;
+  max-width:900px;
+  width:100%;
+  padding:3rem;
+  box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+h1{
+  font-size:3.2rem;
+  margin-bottom:1rem;
+  background:linear-gradient(45deg,#ffffff,#cccccc);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight:800;
+  text-align:center;
+}
+.subtitle{
+  font-size:1.4rem;
+  margin-bottom:2.5rem;
+  color:#cccccc;
+  line-height:1.6;
+  text-align:center;
+}
+.deploy-btn{
+  background:linear-gradient(45deg,#ff4444,#dc2626);
+  color:#ffffff;
+  padding:1.4rem 3rem;
+  font-size:1.4rem;
+  font-weight:700;
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  box-shadow:0 8px 25px rgba(255,68,68,0.3);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  display:block;
+  margin:2rem auto;
+  text-decoration:none;
+}
+.deploy-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 35px rgba(255,68,68,0.4);
+  background:linear-gradient(45deg,#ff6666,#ff4444);
+}
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:2rem;
+  margin:3rem 0;
+}
+.feature{
+  background:#1a1a1a;
+  padding:2rem;
+  border-radius:12px;
+  border:1px solid #333333;
+  transition:all 0.3s ease;
+}
+.feature:hover{
+  border-color:#0066cc;
+  transform:translateY(-4px);
+  box-shadow:0 8px 25px rgba(0,102,204,0.2);
+}
+.feature-icon{
+  font-size:2.5rem;
+  margin-bottom:1rem;
+  display:block;
+}
+.feature h3{
+  color:#ffffff;
+  font-size:1.2rem;
+  margin-bottom:0.8rem;
+  font-weight:600;
+}
+.feature p{
+  color:#cccccc;
+  font-size:1rem;
+  line-height:1.5;
+}
+.steps{
+  background:#1a1a1a;
+  border:1px solid #333333;
+  border-radius:12px;
+  padding:2.5rem;
+  margin:3rem 0;
+}
+.steps h3{
+  color:#ffffff;
+  font-size:1.5rem;
+  margin-bottom:1.5rem;
+  display:flex;
+  align-items:center;
+}
+.steps-icon{
+  background:#ff4444;
+  color:#ffffff;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-right:12px;
+  font-size:1.1rem;
+}
+.step{
+  display:flex;
+  align-items:center;
+  margin:1rem 0;
+  padding:1rem 0;
+  border-bottom:1px solid #333333;
+}
+.step:last-child{border-bottom:none}
+.step-number{
+  background:#0066cc;
+  color:#ffffff;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-right:16px;
+  font-size:1rem;
+  font-weight:600;
+}
+.step-text{
+  color:#e5e5e5;
+  font-size:1.1rem;
+}
+.footer-note{
+  color:#999999;
+  font-size:0.95rem;
+  margin-top:2.5rem;
+  padding-top:2rem;
+  border-top:1px solid #333333;
+  text-align:center;
+  font-style:italic;
+}
+.badge{
+  display:inline-block;
+  background:#ff4444;
+  color:#ffffff;
+  padding:0.4rem 1rem;
+  border-radius:20px;
+  font-size:0.85rem;
+  font-weight:600;
+  margin-bottom:1.5rem;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+}
+@media(max-width:768px){
+  .container{padding:2rem;margin:1rem;border-radius:12px}
+  h1{font-size:2.5rem}
+  .subtitle{font-size:1.2rem}
+  .features{grid-template-columns:1fr}
+  .deploy-btn{padding:1.2rem 2.5rem;font-size:1.2rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="badge">🚀 One-Click Deploy</div>
+  
+  <h1>🎙️ Sesame CSM 1B</h1>
+  <p class="subtitle">Deploy the most advanced conversational speech model to RunPod with <strong>one click</strong>. Professional voice AI for your portfolio projects.</p>
+  
+  <a href="#" class="deploy-btn" onclick="deploy()">Deploy to RunPod Now</a>
+
+  <div class="features">
+    <div class="feature">
+      <span class="feature-icon">⚡</span>
+      <h3>Lightning Fast</h3>
+      <p>Cold start 15-30s, warm inference 2-5s with optimized FlashBoot</p>
+    </div>
+    <div class="feature">
+      <span class="feature-icon">🎭</span>
+      <h3>Voice Cloning</h3>
+      <p>Clone any voice with seconds of reference audio for realistic speech</p>
+    </div>
+    <div class="feature">
+      <span class="feature-icon">💰</span>
+      <h3>Zero Idle Cost</h3>
+      <p>True serverless—pay only for inference seconds, $0 when idle</p>
+    </div>
+    <div class="feature">
+      <span class="feature-icon">🔌</span>
+      <h3>REST API Ready</h3>
+      <p>JSON input → base64 WAV output, perfect for web integration</p>
+    </div>
+  </div>
+  
+  <div class="steps">
+    <h3>
+      <span class="steps-icon">📋</span>
+      Deployment Process
+    </h3>
+    <div class="step">
+      <span class="step-number">1</span>
+      <span class="step-text">Click "Deploy to RunPod Now" button above</span>
+    </div>
+    <div class="step">
+      <span class="step-number">2</span>
+      <span class="step-text">Select NVIDIA A40 or RTX 4090 GPU in console</span>
+    </div>
+    <div class="step">
+      <span class="step-number">3</span>
+      <span class="step-text">Review pre-configured settings and deploy</span>
+    </div>
+    <div class="step">
+      <span class="step-number">4</span>
+      <span class="step-text">Wait 2-3 minutes for complete deployment</span>
+    </div>
+    <div class="step">
+      <span class="step-number">5</span>
+      <span class="step-text">Get API endpoint and start generating natural speech!</span>
+    </div>
+  </div>
+  
+  <p class="footer-note">
+    🛡️ Pre-configured • 📱 No setup required • ⚡ Works out of the box<br>
+    Perfect for developers in Huntington Beach, CA and beyond
+  </p>
+</div>
+
+<script>
+function deploy(){
+  // Analytics tracking
+  if(typeof gtag !== 'undefined'){
+    gtag('event','deploy_click',{
+      'event_category':'deployment',
+      'event_label':'sesame-csm-1b',
+      'value':1
+    });
+  }
+  
+  // Open RunPod with pre-configured template
+  window.open('https://runpod.io/console/deploy?template=sesame-csm-1b&image=runpod/sesame-csm:latest','_blank');
+}
+
+// Smooth entry animation
+document.addEventListener('DOMContentLoaded',function(){
+  const container = document.querySelector('.container');
+  container.style.opacity = '0';
+  container.style.transform = 'translateY(20px)';
+  
+  setTimeout(() => {
+    container.style.transition = 'all 0.6s ease';
+    container.style.opacity = '1';
+    container.style.transform = 'translateY(0)';
+  }, 100);
+});
+</script>
+</body>
+</html>
